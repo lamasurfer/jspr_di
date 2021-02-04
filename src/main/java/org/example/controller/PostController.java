@@ -5,11 +5,13 @@ import com.google.gson.Gson;
 import org.example.exception.NotFoundException;
 import org.example.model.Post;
 import org.example.service.PostService;
+import org.springframework.stereotype.Controller;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.Reader;
 
+@Controller
 public class PostController {
     public static final String APPLICATION_JSON = "application/json";
     private final Gson gson;

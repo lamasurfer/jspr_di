@@ -4,10 +4,12 @@ package org.example.service;
 import org.example.exception.NotFoundException;
 import org.example.model.Post;
 import org.example.repository.PostRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+@Service
 public class PostService {
     private final AtomicLong counter = new AtomicLong(1);
     private final PostRepository repository;
