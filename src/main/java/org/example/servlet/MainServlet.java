@@ -2,8 +2,6 @@ package org.example.servlet;
 
 
 import org.example.controller.PostController;
-import org.example.repository.PostRepository;
-import org.example.service.PostService;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
@@ -24,9 +22,6 @@ public class MainServlet extends HttpServlet {
         final var factory = new DefaultListableBeanFactory();
         final var reader = new XmlBeanDefinitionReader(factory);
         reader.loadBeanDefinitions("beans.xml");
-
-        final var repository = factory.getBean(PostRepository.class);
-        final var service = factory.getBean(PostService.class);
         controller = factory.getBean(PostController.class);
     }
 
